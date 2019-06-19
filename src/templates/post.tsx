@@ -88,17 +88,28 @@ const PostFullImage = styled.figure`
   height: 800px;
   background: ${colors.lightgrey} center center;
   background-size: cover;
-  border-radius: 5px;
+  border-radius: 0;
+
+  img {
+    border-radius: 0;
+  }
+
+  @media (min-width: 500px) {
+    margin: 0 -2.25% -100px;
+    border-radius: 5px;
+    img {
+      border-radius: 5px;
+    }
+  }
 
   @media (max-width: 1170px) {
-    margin: 0 -4vw -100px;
     height: 600px;
-    border-radius: 0;
   }
 
   @media (max-width: 800px) {
     height: 400px;
   }
+
   @media (max-width: 500px) {
     margin-bottom: 4vw;
     height: 350px;
@@ -330,7 +341,7 @@ export default PageTemplate;
 
 export const query = graphql`
   query($slug: String, $primaryTag: String) {
-    logo: file(relativePath: { eq: "img/ghost-logo.png" }) {
+    logo: file(relativePath: { eq: "img/blog-logo-nav.png" }) {
       childImageSharp {
         fixed {
           ...GatsbyImageSharpFixed
@@ -344,7 +355,7 @@ export const query = graphql`
       timeToRead
       frontmatter {
         title
-        userDate: date(formatString: "D MMMM YYYY")
+        userDate: date(formatString: "YYYY.MM.DD")
         date
         tags
         image {

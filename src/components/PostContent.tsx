@@ -514,21 +514,27 @@ export const PostFullContent = styled.section`
   .gatsby-highlight-code-line {
     background-color: hsla(207, 95%, 15%, 1);
     display: block;
+    margin-left: -5.90625rem;
     margin-right: -1.3125rem;
-    margin-left: -1.3125rem;
-    padding-right: 1em;
-    padding-left: 1.25em;
-    border-left: 0.25em solid #ffa7c4;
+    padding-left: 5.90625rem;
   }
 
   .gatsby-highlight {
     margin-bottom: 1.75rem;
-    margin-left: -1.3125rem;
-    margin-right: -1.3125rem;
-    border-radius: 10px;
+    border-radius: 5px;
     background: #011627;
     -webkit-overflow-scrolling: touch;
     overflow: auto;
+  }
+
+  pre[class*='language-'].line-numbers {
+    height: 100%;
+    padding-left: 6rem;
+
+    .line-numbers-rows {
+      padding: 1.3125rem 0;
+      width: 4.59375rem !important;
+    }
   }
 
   @media (max-width: 672px) {
