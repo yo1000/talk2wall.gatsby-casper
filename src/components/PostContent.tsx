@@ -67,6 +67,11 @@ export const PostFullContent = styled.section`
     min-width: 100%;
   }
 
+  p:first-child {
+    font-size: 1.25em;
+    line-height: 1.5em;
+  }
+  
   li {
     word-break: break-word;
   }
@@ -539,7 +544,7 @@ export const PostFullContent = styled.section`
 
   @media (max-width: 672px) {
     .gatsby-highlight {
-      border-radius: 0;
+      border-radius: 5px;
     }
   }
 

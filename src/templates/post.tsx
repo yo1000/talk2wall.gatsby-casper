@@ -85,29 +85,30 @@ export const PostFullTitle = styled.h1`
 
 const PostFullImage = styled.figure`
   margin: 0 -10vw -165px;
-  height: 800px;
   background: ${colors.lightgrey} center center;
-  background-size: cover;
-  border-radius: 0;
+  border-radius: 5px;
+  overflow: hidden;
 
   img {
-    border-radius: 0;
-  }
-
-  @media (min-width: 500px) {
-    margin: 0 -2.25% -100px;
-    border-radius: 5px;
-    img {
-      border-radius: 5px;
-    }
+    width: 100%;
+    height: 800px;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 
   @media (max-width: 1170px) {
-    height: 600px;
+    margin: 0 -4vw -100px;
+    border-radius: 0;
+
+    img {
+      height: 600px;
+    }
   }
 
   @media (max-width: 800px) {
-    height: 400px;
+    img {
+      height: 400px;
+    }
   }
 
   @media (max-width: 500px) {
