@@ -51,7 +51,7 @@ export interface WebsiteConfig {
 const config: WebsiteConfig = {
   title: 'talk2wall',
   description: 'Then go talk to a wall',
-  coverImage: 'img/blog-cover.jpg',
+  coverImage: 'img/blog-cover.png',
   logo: 'img/talk2wall.svg',
   lang: 'ja',
   siteUrl: 'https://www.yo1000.com',
