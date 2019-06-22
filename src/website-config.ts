@@ -1,4 +1,5 @@
 export interface WebsiteConfig {
+  author: string;
   title: string;
   description: string;
   coverImage: string;
@@ -46,9 +47,17 @@ export interface WebsiteConfig {
    * Appears alongside the footer, after the credits
    */
   footer?: string;
+
+  copies: CopyConfig[];
+}
+
+export interface CopyConfig {
+  url: string;
+  title: string;
 }
 
 const config: WebsiteConfig = {
+  author: 'yo1000',
   title: 'talk2wall',
   description: 'Then go talk to a wall',
   coverImage: 'img/blog-cover.png',
@@ -62,7 +71,17 @@ const config: WebsiteConfig = {
   mailchimpName: '',
   mailchimpEmailFieldName: '',
   googleSiteVerification: 'GoogleCode',
-  footer: 'is based on Gatsby Casper',
+  footer: '',
+  copies: [
+    {
+      url: '/',
+      title: `Copyright (C) 2017-${new Date().getFullYear()} yo1000 | YO!CHI KIKUCHI`,
+    },
+    {
+      url: 'https://www.jp.square-enix.com/ffviii/guideline.html',
+      title: 'Copyright (C) 1999, 2019 SQUARE ENIX CO., LTD. All Rights Reserved.',
+    },
+  ]
 };
 
 export default config;

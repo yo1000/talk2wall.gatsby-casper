@@ -24,6 +24,7 @@ const SiteFooterContent = css`
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.3rem;
   a {
+    display: block;
     color: rgba(255, 255, 255, 0.7);
   }
   a:hover {
@@ -70,12 +71,11 @@ const Footer: React.FC = () => {
     <footer css={[outer, SiteFooter]}>
       <div css={[inner, SiteFooterContent]}>
         <section className="copyright">
-          <Link to="/">{config.title}</Link> &copy; {new Date().getFullYear()}{' '}
-          {config.footer && (
-            <Link to="/">
-              | {config.title} {config.footer}
-            </Link>
-          )}
+          {config.copies.map(copy => {
+            return (copy.url.startsWith('http')
+              ? <a href={copy.url}>{copy.title}</a>
+              : <Link to={copy.url}>{copy.title}</Link>)
+          })}
         </section>
         <SiteFooterNav>
           <Link to="/">Latest Posts</Link>

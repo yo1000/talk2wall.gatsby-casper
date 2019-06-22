@@ -63,7 +63,7 @@ const PostCardContentLink = css`
 `;
 
 const PostCardTags = styled.span`
-  display: block;
+//  display: block;
   margin-bottom: 4px;
   color: ${colors.midgrey};
   font-size: 1.2rem;
@@ -71,6 +71,13 @@ const PostCardTags = styled.span`
   font-weight: 500;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+
+  :before {
+    content: ' / ';
+  }
+  :first-of-type:before {
+    content: none;
+  }
 `;
 
 const PostCardTitle = styled.h2`
@@ -220,7 +227,7 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
       <PostCardContent className="post-card-content">
         <Link className="post-card-content-link" css={PostCardContentLink} to={post.fields.slug}>
           <header className="post-card-header">
-            {post.frontmatter.tags && <PostCardTags>{post.frontmatter.tags[0]}</PostCardTags>}
+            {post.frontmatter.tags && post.frontmatter.tags.map(tag => {return (<PostCardTags>{tag}</PostCardTags>)})}
             <PostCardTitle>{post.frontmatter.title}</PostCardTitle>
           </header>
           <PostCardExcerpt>
