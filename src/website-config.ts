@@ -63,7 +63,7 @@ export interface CopyConfig {
 const config: WebsiteConfig = {
   author: 'yo1000',
   title: 'talk2wall',
-  description: 'Then go talk to a wall',
+  description: '',
   coverImage: 'img/blog-cover.png',
   logo: 'img/talk2wall.svg',
   lang: 'ja',
