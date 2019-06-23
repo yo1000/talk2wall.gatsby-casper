@@ -22,6 +22,10 @@ export interface WebsiteConfig {
    */
   twitter?: string;
   /**
+   * full url, no username
+   */
+  github?: string;
+  /**
    * hide or show all email subscribe boxes
    */
   showSubscribe: boolean;
@@ -64,8 +68,8 @@ const config: WebsiteConfig = {
   logo: 'img/talk2wall.svg',
   lang: 'ja',
   siteUrl: 'https://www.yo1000.com',
-  facebook: 'https://www.facebook.com/ghost',
-  twitter: 'https://twitter.com/tryghost',
+  twitter: 'https://twitter.com/yoichi_kikuchi',
+  github: 'https://github.com/yo1000',
   showSubscribe: false,
   mailchimpAction: 'https://',
   mailchimpName: '',
