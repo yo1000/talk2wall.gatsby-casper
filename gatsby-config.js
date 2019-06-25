@@ -65,6 +65,8 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-yaml',
     'gatsby-plugin-feed',
+    'gatsby-redirect-from',
+    'gatsby-plugin-meta-redirect',
     {
       resolve: 'gatsby-plugin-postcss',
       options: {
