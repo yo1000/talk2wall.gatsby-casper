@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-casper",
-  "description": "Casper for gatsby",
-  "version": "0.0.0",
+  "name": "talk2wall",
+  "description": "Then go talk to a wall",
+  "version": "1.0.0",
   "private": true,
-  "author": "Scott Cooper <scttcper@gmail.com>",
+  "author": "yo1000 | YO!CHI KIKUCHI <i@yo1000.com>",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
