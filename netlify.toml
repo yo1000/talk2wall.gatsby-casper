@@ -1,0 +1,5 @@
+[build]
+  publish = "public"
+  command = "npm run build"
+[build.environment]
+  NPM_VERSION = "6.8.0"
