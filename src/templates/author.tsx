@@ -21,11 +21,12 @@ import {
   SocialLink,
 } from '../styles/shared';
 import { PageContext } from './post';
-import Facebook from '../components/icons/facebook';
 import Helmet from 'react-helmet';
 import config from '../website-config';
 import Website from '../components/icons/website';
 import Twitter from '../components/icons/twitter';
+import Facebook from '../components/icons/facebook';
+import GitHub from '../components/icons/github';
 
 const HiddenMobile = css`
   @media (max-width: 500px) {
@@ -95,6 +96,7 @@ interface AuthorTemplateProps {
       website?: string;
       twitter?: string;
       facebook?: string;
+      github?: string;
       location?: string;
       // eslint-disable-next-line @typescript-eslint/camelcase
       profile_image?: {
@@ -224,6 +226,18 @@ const Author: React.FC<AuthorTemplateProps> = props => {
                     <Facebook />
                   </a>
                 )}
+                {author.github && (
+                  <a
+                    className="social-link-gh"
+                    css={SocialLink}
+                    href={`https://github.com/${author.github}`}
+                    title="GitHub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <GitHub />
+                  </a>
+                )}
                 {/* TODO: RSS for author */}
                 {/* <a
                   css={SocialLink} className="social-link-rss"
@@ -266,9 +280,10 @@ export const pageQuery = graphql`
     authorYaml(id: { eq: $author }) {
       id
       website
-      twitter
       bio
+      twitter
       facebook
+      github
       location
       profile_image {
         childImageSharp {
