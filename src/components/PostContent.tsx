@@ -67,7 +67,7 @@ export const PostFullContent = styled.section`
     min-width: 100%;
   }
 
-  p:first-child {
+  .post-content>p:first-child {
     font-size: 1.25em;
     line-height: 1.5em;
   }
