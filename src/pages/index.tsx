@@ -154,6 +154,7 @@ const IndexPage: React.FC<IndexProps> = props => {
                 return (
                   (post.node.frontmatter.draft !== true ||
                     process.env.NODE_ENV !== 'production') && (
+                    post.node.frontmatter.tags.includes("Tech")) && (
                     <PostCard key={post.node.fields.slug} post={post.node} />
                   )
                 );
