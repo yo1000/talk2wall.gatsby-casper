@@ -525,7 +525,7 @@ export const PostFullContent = styled.section`
   }
 
   .gatsby-highlight {
-    margin-bottom: 1.75rem;
+    margin: 1.5em 0 3em;
     border-radius: 5px;
     background: #011627;
     -webkit-overflow-scrolling: touch;
