@@ -232,6 +232,8 @@ export const PostFullContent = styled.section`
     color: ${setLightness('0.05', colors.darkgrey)};
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
       'Open Sans', 'Helvetica Neue', sans-serif;
+
+    display: inline-block;
   }
 
   h1 {
