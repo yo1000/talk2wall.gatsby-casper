@@ -68,6 +68,7 @@ const NavStyles = css`
     padding: 10px 12px;
     color: #fff;
     opacity: 0.8;
+    text-shadow: 0 0 1.5rem #000;
   }
 
   li a:hover {
