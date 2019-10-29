@@ -11,7 +11,7 @@ export const PostFullContent = styled.section`
   padding: 70px 100px 0;
   min-height: 230px;
   font-family: Georgia, serif;
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 1.6em;
   background: #fff;
 
@@ -175,17 +175,19 @@ export const PostFullContent = styled.section`
 
   pre {
     overflow-x: auto;
+    /* for syntax highlighting */
     /* margin: 1.5em 0 3em; */
     padding: 20px;
     max-width: 100%;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    border-radius: 5px;
+
     /* border: color(var(--darkgrey) l(-10%)) 1px solid; */
     border: ${darken('0.01', colors.darkgrey)} 1px solid;
     color: ${colors.whitegrey};
-    font-size: 1.4rem;
-    line-height: 1.5em;
     /* background: color(var(--darkgrey) l(-3%)); */
     background: ${darken('0.03', colors.darkgrey)};
-    border-radius: 5px;
   }
 
   pre code {
@@ -236,10 +238,15 @@ export const PostFullContent = styled.section`
     display: inline-block;
   }
 
+  h1,
+  h2 {
+    margin: .5em 0 .4em;
+    line-height: 1.25em;
+    font-weight: 600;
+  }
+
   h1 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: 4.6rem;
-    font-weight: 700;
+    font-size: 4.2rem;
   }
   @media (max-width: 500px) {
     h1 {
@@ -248,9 +255,7 @@ export const PostFullContent = styled.section`
   }
 
   h2 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: 3.6rem;
-    font-weight: 700;
+    font-size: 3.2rem;
   }
   @media (max-width: 500px) {
     h2 {
@@ -258,23 +263,19 @@ export const PostFullContent = styled.section`
     }
   }
 
-  h3 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: 2.8rem;
-    font-weight: 700;
-  }
-  @media (max-width: 500px) {
-    h3 {
-      font-size: 2.2rem;
-    }
+  h3,
+  h4 {
+    margin: .5em 0 .2em;
+    font-size: 2.5rem;
+    font-weight: 600;
   }
 
-  h4 {
-    margin: 0.5em 0 0.2em 0;
-    font-size: 2.8rem;
-    font-weight: 700;
+  h3 {
+    line-height: 1.3em;
   }
+
   @media (max-width: 500px) {
+    h3,
     h4 {
       font-size: 2.2rem;
     }
@@ -282,8 +283,8 @@ export const PostFullContent = styled.section`
 
   h5 {
     display: block;
-    margin: 0.5em 0;
-    padding: 1em 0 1.5em;
+    margin: .5em 0;
+    padding: .4em 1em .9em;
     border: 0;
     color: ${colors.blue};
     font-family: Georgia, serif;
@@ -304,7 +305,7 @@ export const PostFullContent = styled.section`
   }
 
   h6 {
-    margin: 0.5em 0 0.2em 0;
+    margin: .5em 0 .2em;
     font-size: 2.3rem;
     font-weight: 700;
   }
@@ -402,7 +403,6 @@ export const PostFullContent = styled.section`
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
-    margin-bottom: 0;
 
     -moz-tab-size: 4;
     -o-tab-size: 4;
