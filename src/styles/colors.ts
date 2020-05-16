@@ -10,4 +10,46 @@ export const colors = {
   whitegrey: '#e5eff5',
   pink: '#fa3a57',
   brown: '#a3821a',
+
+  ff8BallonBackgroundLeft: 'rgb(46, 46, 46)',
+  ff8BallonBackgroundRight: 'rgb(80, 80, 80)',
+  ff8BallonTranslucentBackgroundLeft: 'rgba(14, 14, 14, .25)',
+  ff8BallonTranslucentBackgroundRight: 'rgba(22, 22, 22, .25)',
+
+  ff8BallonBorderOutLeft: 'rgb(97, 97, 97)',
+  ff8BallonBorderOutTop: 'rgb(97, 97, 97)',
+  ff8BallonBorderOutRight: 'rgb(36, 36, 36)',
+  ff8BallonBorderOutBottom: 'rgb(36, 36, 36)',
+
+  ff8BallonBorderInLeft: 'rgb(93, 93, 93)',
+  ff8BallonBorderInTop: 'rgb(93, 93, 93)',
+  ff8BallonBorderInRight: 'rgb(63, 63, 63)',
+  ff8BallonBorderInBottom: 'rgb(63, 63, 63)',
+
+  ff8White: 'rgb(232, 232, 232)',
+  ff8WhiteShadow: 'rgb(50, 50, 37)',
+  ff8WhiteSub: 'rgba(232, 232, 232, .5)',
+  ff8WhiteSubShadow: 'rgba(50, 50, 37, .5)',
+  ff8Gray: 'rgb(109, 109, 109)',
+  ff8GrayShadow: 'rgb(22, 22, 22)',
+  ff8GrayBlue: 'rgb(129, 129, 147)',
+  ff8GrayBlueShadow: 'rgb(37, 37, 37)',
+  ff8Blue: 'rgb(89, 163, 234)',
+  ff8BlueShadow: 'rgb(31, 31, 31)',
+  ff8Red: 'rgb(252, 11, 21)',
+  ff8RedShadow: 'rgb(24, 24, 24)',
+  ff8Yellow: 'rgb(214, 218, 33)',
+  ff8YellowShadow: 'rgb(31, 31, 31)',
+  ff8Green: 'rgb(36, 255, 37)',
+  ff8GreenShadow: 'rgb(43, 43, 37)',
+
+  background: 'rgb(13, 21, 35)',
+  balloonTitle: 'rgb(232, 232, 232)',
+  balloonTitleShadow: 'rgb(50, 50, 37)',
+  balloonText: 'rgba(232, 232, 232, .5)',
+  balloonTextShadow: 'rgba(50, 50, 37, .5)',
+  metaText: 'rgb(129, 129, 147)',
+  metaTextShadow: 'rgb(22, 22, 22)',
+
+
 };

@@ -41,7 +41,6 @@ const AuthorMeta = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 0 10px 0;
-  font-family: Georgia, serif;
   font-style: italic;
 `;
 
@@ -158,7 +157,7 @@ const Author: React.FC<AuthorTemplateProps> = props => {
       </Helmet>
       <Wrapper>
         <header
-          className="no-cover"
+          className="no-cover clear-balloon"
           css={[outer, SiteHeader]}
           style={{
             // eslint-disable-next-line @typescript-eslint/camelcase

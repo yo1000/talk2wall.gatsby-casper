@@ -4,50 +4,29 @@ import styled from '@emotion/styled';
 import RehypeReact from 'rehype-react';
 
 import { colors } from '../styles/colors';
+import { styles } from '../styles/styles';
 
 export const PostFullContent = styled.section`
   position: relative;
   margin: 0 auto;
   padding: 70px 100px 0;
   min-height: 230px;
-  font-family: Georgia, serif;
   font-size: 2rem;
   line-height: 1.6em;
-  background: #fff;
+  ${styles.balloonText('1px')}
 
+  background-size: cover;
+  box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+  transition: all 0.5s ease;
+
+  ${styles.balloon}
+  position:relative;
+  
   @media (max-width: 1170px) {
     padding: 5vw 7vw 0;
   }
   @media (max-width: 800px) {
     font-size: 1.9rem;
-  }
-
-  :before {
-    content: '';
-    position: absolute;
-    top: 15px;
-    left: -5px;
-    z-index: -1;
-    display: block;
-    width: 20px;
-    height: 200px;
-    background: rgba(39, 44, 49, 0.15);
-    filter: blur(5px);
-    transform: rotate(-5deg);
-  }
-
-  :after {
-    content: '';
-    position: absolute;
-    top: 15px;
-    right: -5px;
-    z-index: -1;
-    display: block;
-    width: 20px;
-    height: 200px;
-    background: rgba(39, 44, 49, 0.15);
-    filter: blur(5px);
-    transform: rotate(5deg);
   }
 
   h1,
@@ -81,20 +60,19 @@ export const PostFullContent = styled.section`
   }
 
   a {
-    color: #000;
+    color: ${colors.ff8Blue};
+    text-shadow: ${colors.ff8BlueShadow} 1px 1px;
+
     word-break: break-word;
-    box-shadow: ${colors.blue} 0 -1px 0 inset;
   }
 
   a:hover {
-    color: ${colors.blue};
     text-decoration: none;
   }
 
   strong,
   em {
-    /* color: color(var(--darkgrey) l(-5%)); */
-    color: ${darken('0.05', colors.darkgrey)};
+    ${styles.balloonTitle('2px')}
   }
 
   small {
@@ -164,9 +142,10 @@ export const PostFullContent = styled.section`
     padding: 0 5px 2px;
     font-size: 0.8em;
     line-height: 1em;
-    font-weight: 400 !important;
-    background: ${colors.whitegrey};
+    color: ${colors.ff8Yellow};
+    text-shadow: ${colors.ff8YellowShadow} 2px 2px;
     border-radius: 3px;
+    font-weight: 600;
   }
 
   p code {
@@ -176,21 +155,22 @@ export const PostFullContent = styled.section`
   pre {
     overflow-x: auto;
     /* for syntax highlighting */
-    /* margin: 1.5em 0 3em; */
     padding: 20px;
     max-width: 100%;
     font-size: 1.4rem;
     line-height: 1.5em;
     border-radius: 5px;
 
-    /* border: color(var(--darkgrey) l(-10%)) 1px solid; */
     border: ${darken('0.01', colors.darkgrey)} 1px solid;
     color: ${colors.whitegrey};
-    /* background: color(var(--darkgrey) l(-3%)); */
     background: ${darken('0.03', colors.darkgrey)};
   }
 
   pre code {
+    border: none;
+    font-weight: 400;
+    text-shadow: ${colors.ff8YellowShadow} 1px 1px;
+
     padding: 0;
     font-size: inherit;
     line-height: inherit;
@@ -231,15 +211,15 @@ export const PostFullContent = styled.section`
   h4,
   h5,
   h6 {
-    color: ${setLightness('0.05', colors.darkgrey)};
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-      'Open Sans', 'Helvetica Neue', sans-serif;
+    ${styles.balloonTitle('1px')}
 
     display: inline-block;
   }
 
   h1,
   h2 {
+    ${styles.balloonTitle('2px')}
+
     margin: .5em 0 .4em;
     line-height: 1.25em;
     font-weight: 600;
@@ -287,7 +267,6 @@ export const PostFullContent = styled.section`
     padding: .4em 1em .9em;
     border: 0;
     color: ${colors.blue};
-    font-family: Georgia, serif;
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
@@ -324,8 +303,6 @@ export const PostFullContent = styled.section`
     width: auto;
     border-spacing: 0;
     border-collapse: collapse;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-      'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.6rem;
     white-space: nowrap;
     vertical-align: top;
@@ -381,7 +358,7 @@ export const PostFullContent = styled.section`
   }
 
   @media (max-width: 500px) {
-    padding: 0;
+    padding: 0 1.5rem;
     :before {
       display: none;
     }
@@ -395,7 +372,6 @@ export const PostFullContent = styled.section`
   code[class*='language-'],
   pre[class*='language-'] {
     background: none;
-    font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
     font-feature-settings: normal;
     text-align: left;
     white-space: pre;
@@ -528,25 +504,30 @@ export const PostFullContent = styled.section`
 
   .gatsby-highlight {
     margin: 1.5em 0 3em;
-    border-radius: 5px;
-    background: #011627;
+    
+    ${styles.balloonTranslucent}
+    position:relative;
+  
     -webkit-overflow-scrolling: touch;
     overflow: auto;
+
+    pre {
+      border: 0;
+    }
   }
 
   pre[class*='language-'].line-numbers {
+    position: static;
     height: 100%;
     padding-left: 6rem;
 
     .line-numbers-rows {
+      height: 100%;
+      background: rgb(41,41,41);
+
       padding: 1.3125rem 0;
       width: 4.59375rem !important;
-    }
-  }
-
-  @media (max-width: 672px) {
-    .gatsby-highlight {
-      border-radius: 5px;
+      border-right: 2px ${colors.ff8BallonBorderInLeft} solid;
     }
   }
 

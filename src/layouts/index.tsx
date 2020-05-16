@@ -123,7 +123,6 @@ const GlobalStyles = css`
   }
   html {
     box-sizing: border-box;
-    font-family: sans-serif;
 
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -269,15 +268,14 @@ const GlobalStyles = css`
   body {
     overflow-x: hidden;
     color: ${darken('0.25', colors.midgrey)};
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-      'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     font-size: 1.5rem;
     line-height: 1.6em;
     font-weight: 400;
     font-style: normal;
     letter-spacing: 0;
     text-rendering: optimizeLegibility;
-    background: #fff;
+    background: ${colors.background};
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -404,7 +402,7 @@ const GlobalStyles = css`
   }
 
   a {
-    color: ${darken('0.05', colors.blue)};
+    color: ${colors.ff8Blue};
     text-decoration: none;
   }
 
@@ -473,10 +471,6 @@ const GlobalStyles = css`
     font-size: 1.4rem;
     font-weight: 500;
   }
-
-  body {
-    background: #f4f8fb;
-  }
 `;
 
 const IndexLayout: React.FC<IndexProps> = props => {
@@ -484,6 +478,7 @@ const IndexLayout: React.FC<IndexProps> = props => {
     <div className={props.className}>
       <Helmet>
         <link rel="icon" href={favicon} type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet"/>
       </Helmet>
       <Global styles={GlobalStyles} />
       {props.children}

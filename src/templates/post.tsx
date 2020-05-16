@@ -1,7 +1,6 @@
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import * as _ from 'lodash';
-import { setLightness } from 'polished';
 import * as React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
@@ -19,12 +18,12 @@ import Subscribe from '../components/subscribe/Subscribe';
 import Wrapper from '../components/Wrapper';
 import IndexLayout from '../layouts';
 import { colors } from '../styles/colors';
+import { styles } from '../styles/styles';
 import { inner, outer, SiteHeader, SiteMain } from '../styles/shared';
 import config from '../website-config';
 
 const PostTemplate = css`
   .site-main {
-    background: #fff;
     padding-bottom: 4vw;
   }
 `;
@@ -72,12 +71,23 @@ const PostFullMeta = styled.section`
 `;
 
 const PostFullMetaDate = styled.time`
-  color: ${colors.blue};
+  color: ${colors.ff8GrayBlue};
+  text-shadow: ${colors.ff8GrayBlueShadow} 1px 1px;
 `;
 
 export const PostFullTitle = styled.h1`
   margin: 0;
-  color: ${setLightness('0.05', colors.darkgrey)};
+  color: ${colors.balloonTitle};
+  text-shadow: ${colors.balloonTextShadow};
+
+  background-size: cover;
+  box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+  transition: all 0.5s ease;
+
+  ${styles.balloon};
+  position:relative;
+  padding: 1rem 4rem;
+
   @media (max-width: 500px) {
     font-size: 2.9rem;
   }

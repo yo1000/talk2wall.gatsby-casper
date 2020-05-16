@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import * as _ from 'lodash';
 
 import { colors } from '../styles/colors';
+import { styles } from '../styles/styles';
 import InfinityIcon from './icons/infinity';
 import config from '../website-config';
 
@@ -22,9 +23,10 @@ const ReadNextCardStyles = styled.article<ReadNextCardStylesProps>`
   color: #fff;
   background: ${colors.darkgrey} center center;
   background-size: cover;
-  border-radius: 5px;
   box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
   background-image: url(${props => props.coverImage});
+
+  ${styles.balloonBorder};
 
   :before {
     content: "";
@@ -35,7 +37,6 @@ const ReadNextCardStyles = styled.article<ReadNextCardStylesProps>`
     left: 0;
     display: block;
     background: linear-gradient(135deg, rgba(0,40,60,0.8) 0%,rgba(0,20,40,0.7) 100%);
-    border-radius: 5px;
     backdrop-filter: blur(2px);
   }
 `;

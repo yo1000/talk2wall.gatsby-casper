@@ -86,7 +86,7 @@ const Tags: React.FC<TagTemplateProps> = props => {
       </Helmet>
       <Wrapper>
         <header
-          className={`${tagData && tagData.node.image ? '' : 'no-cover'}`}
+          className={`${tagData && tagData.node.image ? '' : 'no-cover'} clear-balloon`}
           css={[outer, SiteHeader]}
           style={{
             backgroundImage:

@@ -7,6 +7,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { colors } from '../styles/colors';
+import { styles } from '../styles/styles';
 import { PageContext } from '../templates/post';
 
 const PostCardStyles = css`
@@ -16,11 +17,36 @@ const PostCardStyles = css`
   overflow: hidden;
   margin: 0 20px 40px;
   min-height: 300px;
-  background: #fff center center;
+  
   background-size: cover;
-  border-radius: 5px;
   box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
   transition: all 0.5s ease;
+
+  ${styles.balloon}
+
+  // background: linear-gradient(to right, ${colors.ff8BallonBackgroundLeft}, ${colors.ff8BallonBackgroundRight}) center center;
+  // border-radius: 2px;
+  // border-left: 6px groove ${colors.ff8BallonBorderInLeft};
+  // border-top: 6px groove ${colors.ff8BallonBorderInTop}; 
+  // border-right: 6px ridge ${colors.ff8BallonBorderInRight}; 
+  // border-bottom: 6px ridge ${colors.ff8BallonBorderInBottom};
+  position:relative;
+  
+  // :before {
+  //   border-left: 3px solid ${colors.ff8BallonBorderOutLeft};
+  //   border-top: 3px solid ${colors.ff8BallonBorderOutTop}; 
+  //   border-right: 3px solid ${colors.ff8BallonBorderOutRight}; 
+  //   border-bottom: 3px solid ${colors.ff8BallonBorderOutBottom};
+  //   position:absolute; 
+    
+  //   display:block; 
+  //   content:''; 
+  //   height:100%; 
+  //   width:100%; 
+  //   box-sizing: border-box; 
+  //   -moz-box-sizing: border-box;
+  //   -webkit-box-sizing: border-box;
+  // }
 
   :hover {
     box-shadow: rgba(39, 44, 49, 0.07) 8px 28px 50px, rgba(39, 44, 49, 0.04) 1px 6px 12px;
@@ -33,7 +59,6 @@ const PostCardImageLink = css`
   position: relative;
   display: block;
   overflow: hidden;
-  border-radius: 5px 5px 0 0;
 `;
 
 const PostCardImage = styled.div`
@@ -48,6 +73,7 @@ const PostCardContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  word-break: break-all;
 `;
 
 const PostCardContentLink = css`
@@ -55,7 +81,11 @@ const PostCardContentLink = css`
   flex-grow: 1;
   display: block;
   padding: 25px 25px 0;
-  color: ${colors.darkgrey};
+  color: ${colors.balloonTitle};
+  
+  h2 {
+    text-shadow: ${colors.balloonTitleShadow} 1px 1px;
+  }
 
   :hover {
     text-decoration: none;
@@ -63,15 +93,19 @@ const PostCardContentLink = css`
 `;
 
 const PostCardTags = styled.span`
-//  display: block;
+  // display: block;
   margin-bottom: 4px;
-  color: ${colors.midgrey};
+  // color: ${colors.midgrey};
+  color: ${colors.metaText};
+  text-shadow: ${colors.metaTextShadow} 1px 1px;
+
   font-size: 1.2rem;
   line-height: 1.15em;
   font-weight: 500;
   letter-spacing: 0.5px;
+  word-break: keep-all;
   text-transform: uppercase;
-
+  
   :before {
     content: ' / ';
   }
@@ -81,11 +115,12 @@ const PostCardTags = styled.span`
 `;
 
 const PostCardTitle = styled.h2`
-  margin-top: 0;
+  margin-top: .5em;
 `;
 
 const PostCardExcerpt = styled.section`
-  font-family: Georgia, serif;
+  color: ${colors.balloonText};
+  text-shadow: ${colors.balloonTextShadow} 1px 1px;
 `;
 
 const PostCardMeta = styled.footer`
@@ -191,7 +226,8 @@ const AuthorProfileImage = styled.img`
 const ReadingTime = styled.span`
   flex-shrink: 0;
   margin-left: 20px;
-  color: ${colors.midgrey};
+  color: ${colors.metaText};
+  text-shadow: ${colors.metaTextShadow} 1px 1px;
   font-size: 1.2rem;
   line-height: 33px;
   font-weight: 500;

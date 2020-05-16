@@ -20,6 +20,8 @@ import {
   SiteMain,
   SiteTitle,
 } from '../styles/shared';
+
+import { colors } from '../styles/colors';
 import { PageContext } from '../templates/post';
 
 const HomePosts = css`
@@ -32,11 +34,9 @@ const HomePosts = css`
     .post-card:nth-of-type(6n + 1):not(.no-image) .post-card-image-link {
       position: relative;
       flex: 1 1 auto;
-      border-radius: 5px 0 0 5px;
     }
 
     .post-card:nth-of-type(6n + 1):not(.no-image) .post-card-image {
-      position: absolute;
       width: 100%;
       height: 100%;
     }
@@ -47,6 +47,7 @@ const HomePosts = css`
 
     .post-card:nth-of-type(6n + 1):not(.no-image) h2 {
       font-size: 2.6rem;
+      text-shadow: ${colors.balloonTitleShadow} 2px 2px;
     }
 
     .post-card:nth-of-type(6n + 1):not(.no-image) p {
@@ -127,6 +128,7 @@ const IndexPage: React.FC<IndexProps> = props => {
           style={{
             backgroundImage: `url('${props.data.header.childImageSharp.fluid.src}')`,
           }}
+          className="clear-balloon"
         >
           <div css={inner}>
             <SiteHeaderContent>

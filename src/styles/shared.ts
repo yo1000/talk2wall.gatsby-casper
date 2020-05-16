@@ -74,12 +74,38 @@ export const SocialLink = css`
 
 export const SiteHeader = css`
   position: relative;
+  margin-top -3px;
   padding-top: 12px;
   padding-bottom: 12px;
   color: #fff;
-  /* background: color(var(--darkgrey) l(-5%)) no-repeat center center; */
-  background: ${darken('0.05', colors.darkgrey)} no-repeat center center;
+  background: linear-gradient(to right, ${colors.ff8BallonBackgroundLeft}, ${colors.ff8BallonBackgroundRight}) center center;
   background-size: cover;
+
+  border-bottom: 3px solid rgb(21, 21, 21);
+  position:relative;
+  
+  :before {
+    border-bottom: 3px solid rgb(36, 36, 36);
+
+    content:'';
+    display: block; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  &.clear-balloon {
+    border: none;
+
+    :before {
+      border: none;
+    }
+  }
 `;
 
 export const SiteHeaderContent = styled.div`
