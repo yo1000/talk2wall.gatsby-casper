@@ -503,7 +503,7 @@ export const PostFullContent = styled.section`
   }
 
   .gatsby-highlight {
-    margin: 1.5em 0 3em;
+    margin: 1.5em 0;
     
     ${styles.balloonTranslucent}
     position:relative;
