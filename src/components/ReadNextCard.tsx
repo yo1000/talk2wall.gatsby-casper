@@ -20,13 +20,13 @@ const ReadNextCardStyles = styled.article<ReadNextCardStylesProps>`
   overflow: hidden;
   margin: 0 20px 40px;
   padding: 25px;
-  color: #fff;
-  background: ${colors.darkgrey} center center;
-  background-size: cover;
   box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
-  background-image: url(${props => props.coverImage});
 
-  ${styles.balloonBorder};
+  ${styles.foreground(colors.foreground.header, '1px')};
+  ${styles.background(colors.background.balloonGlassy)};
+  ${styles.border(colors.border.balloon, 6)};
+  background-image: url(${props => props.coverImage});
+  background-size: cover;
 
   :before {
     content: "";
@@ -58,13 +58,13 @@ const ReadNextCardHeaderSitetitle = styled.small`
 const ReadNextCardHeaderTitle = styled.h3`
   margin: 0;
   padding: 0 20px;
-  color: #fff;
   font-size: 3rem;
   line-height: 1.2em;
   letter-spacing: 1px;
+  ${styles.foreground(colors.foreground.header, '2px')};
 
   a {
-    color: #fff;
+    ${styles.foreground(colors.foreground.header, '1px')};
     font-weight: 300;
     text-decoration: none;
   }
@@ -119,7 +119,7 @@ const ReadNextCardContent = styled.div`
     display: block;
     padding: 20px 0;
     border-bottom: rgba(255, 255, 255, 0.3) 1px solid;
-    color: #fff;
+    ${styles.foreground(colors.foreground.header, '1px')};
     font-weight: 500;
     vertical-align: top;
     transition: opacity 0.3s ease;
@@ -140,7 +140,7 @@ const ReadNextCardFooter = styled.footer`
   text-align: center;
 
   a {
-    color: #fff;
+    ${styles.foreground(colors.foreground.header, '1px')};
   }
 `;
 

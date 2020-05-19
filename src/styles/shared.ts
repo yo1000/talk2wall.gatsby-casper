@@ -1,6 +1,7 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { colors } from './colors';
+import { styles } from './styles';
 import { darken, lighten } from 'polished';
 
 export const outer = css`
@@ -77,27 +78,17 @@ export const SiteHeader = css`
   margin-top -3px;
   padding-top: 12px;
   padding-bottom: 12px;
-  color: #fff;
-  background: linear-gradient(to right, ${colors.ff8BallonBackgroundLeft}, ${colors.ff8BallonBackgroundRight}) center center;
+
+  ${styles.foreground(colors.foreground.header, '1px')};
+  ${styles.background(colors.background.ballon)};
+  ${styles.border(colors.border.balloon, 6)};
+  background-position: center;
   background-size: cover;
 
-  border-bottom: 3px solid rgb(21, 21, 21);
+  border-left: none;
+  border-top: none;
+  border-right: none;
   position:relative;
-  
-  :before {
-    border-bottom: 3px solid rgb(36, 36, 36);
-
-    content:'';
-    display: block; 
-    position: absolute; 
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-  }
 
   &.clear-balloon {
     border: none;

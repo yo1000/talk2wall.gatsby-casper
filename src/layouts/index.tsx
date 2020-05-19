@@ -4,6 +4,7 @@ import * as React from 'react';
 import Helmet from 'react-helmet';
 
 import { colors } from '../styles/colors';
+import { styles } from '../styles/styles';
 // @ts-ignore
 import favicon from '../../src/favicon.ico';
 
@@ -275,7 +276,7 @@ const GlobalStyles = css`
     font-style: normal;
     letter-spacing: 0;
     text-rendering: optimizeLegibility;
-    background: ${colors.background};
+    ${styles.background(colors.background.standard)};
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -402,7 +403,7 @@ const GlobalStyles = css`
   }
 
   a {
-    color: ${colors.ff8Blue};
+    ${styles.foreground(colors.foreground.link, '1px')};
     text-decoration: none;
   }
 

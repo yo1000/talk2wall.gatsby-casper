@@ -13,13 +13,14 @@ export const PostFullContent = styled.section`
   min-height: 230px;
   font-size: 2rem;
   line-height: 1.6em;
-  ${styles.balloonText('1px')}
+  ${styles.foreground(colors.foreground.standard, '1px')};
 
   background-size: cover;
   box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
   transition: all 0.5s ease;
 
-  ${styles.balloon}
+  ${styles.background(colors.background.ballon)};
+  ${styles.border(colors.border.balloon, 6)};
   position:relative;
   
   @media (max-width: 1170px) {
@@ -46,6 +47,25 @@ export const PostFullContent = styled.section`
     min-width: 100%;
   }
 
+  ul,
+  ol {
+    list-style: none;
+    padding-left: 1.5em;
+  }
+
+  li:before {
+    display: inline-block;
+    position: absolute;
+    width: 2em;
+    word-break: break-word;
+    background: url(/img/yubi.png) left 0 top .525em no-repeat;
+    background-size: 1.4em;
+    content: '';
+    height: 1.6em;
+    line-height: 0;
+    left: 5em;
+  }
+
   .post-content>p:first-child {
     font-size: 1.25em;
     line-height: 1.5em;
@@ -60,9 +80,7 @@ export const PostFullContent = styled.section`
   }
 
   a {
-    color: ${colors.ff8Blue};
-    text-shadow: ${colors.ff8BlueShadow} 1px 1px;
-
+    ${styles.foreground(colors.foreground.link, '1px')};
     word-break: break-word;
   }
 
@@ -72,7 +90,7 @@ export const PostFullContent = styled.section`
 
   strong,
   em {
-    ${styles.balloonTitle('2px')}
+    ${styles.foreground(colors.foreground.header, '2px')};
   }
 
   small {
@@ -142,8 +160,7 @@ export const PostFullContent = styled.section`
     padding: 0 5px 2px;
     font-size: 0.8em;
     line-height: 1em;
-    color: ${colors.ff8Yellow};
-    text-shadow: ${colors.ff8YellowShadow} 2px 2px;
+    ${styles.foreground(colors.foreground.code, '1px')};
     border-radius: 3px;
     font-weight: 600;
   }
@@ -169,7 +186,7 @@ export const PostFullContent = styled.section`
   pre code {
     border: none;
     font-weight: 400;
-    text-shadow: ${colors.ff8YellowShadow} 1px 1px;
+    text-shadow: ${colors.foreground.code.shadow} 1px 1px;
 
     padding: 0;
     font-size: inherit;
@@ -211,15 +228,13 @@ export const PostFullContent = styled.section`
   h4,
   h5,
   h6 {
-    ${styles.balloonTitle('1px')}
-
+    ${styles.foreground(colors.foreground.header, '1px')};
     display: inline-block;
   }
 
   h1,
   h2 {
-    ${styles.balloonTitle('2px')}
-
+    ${styles.foreground(colors.foreground.header, '2px')};
     margin: .5em 0 .4em;
     line-height: 1.25em;
     font-weight: 600;
@@ -266,7 +281,7 @@ export const PostFullContent = styled.section`
     margin: .5em 0;
     padding: .4em 1em .9em;
     border: 0;
-    color: ${colors.blue};
+    color: ${colors.foreground.link.color};
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
@@ -505,7 +520,8 @@ export const PostFullContent = styled.section`
   .gatsby-highlight {
     margin: 1.5em 0;
     
-    ${styles.balloonTranslucent}
+    ${styles.background(colors.background.balloonGlassy)};
+    ${styles.border(colors.border.balloon, 4)};
     position:relative;
   
     -webkit-overflow-scrolling: touch;
@@ -523,11 +539,11 @@ export const PostFullContent = styled.section`
 
     .line-numbers-rows {
       height: 100%;
-      background: rgb(41,41,41);
+      background: #2f2f2f;
 
       padding: 1.3125rem 0;
       width: 4.59375rem !important;
-      border-right: 2px ${colors.ff8BallonBorderInLeft} solid;
+      border-right: 2px ${colors.border.balloon.left} solid;
     }
   }
 

@@ -22,6 +22,7 @@ import {
 } from '../styles/shared';
 
 import { colors } from '../styles/colors';
+import { styles } from '../styles/styles';
 import { PageContext } from '../templates/post';
 
 const HomePosts = css`
@@ -47,7 +48,7 @@ const HomePosts = css`
 
     .post-card:nth-of-type(6n + 1):not(.no-image) h2 {
       font-size: 2.6rem;
-      text-shadow: ${colors.balloonTitleShadow} 2px 2px;
+      ${styles.foreground(colors.foreground.header, '2px')};
     }
 
     .post-card:nth-of-type(6n + 1):not(.no-image) p {

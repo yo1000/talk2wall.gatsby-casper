@@ -4,6 +4,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 
 import { colors } from '../styles/colors';
+import { styles } from '../styles/styles';
 import { AuthorProfileImage } from '../styles/shared';
 
 const AuthorCardSection = styled.section`
@@ -16,8 +17,8 @@ const AuthorCardName = styled.h4`
   font-size: 2rem;
 
   a {
-    color: ${colors.darkgrey};
     font-weight: 700;
+    ${styles.foreground(colors.foreground.header, '1px')};
   }
 
   a:hover {
@@ -28,8 +29,8 @@ const AuthorCardName = styled.h4`
 const AuthorCardContent = styled.section`
   p {
     margin: 0;
-    color: ${colors.midgrey};
     line-height: 1.3em;
+    ${styles.foreground(colors.foreground.header, '1px')};
   }
 `;
 

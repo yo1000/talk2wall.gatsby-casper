@@ -71,20 +71,19 @@ const PostFullMeta = styled.section`
 `;
 
 const PostFullMetaDate = styled.time`
-  color: ${colors.ff8GrayBlue};
-  text-shadow: ${colors.ff8GrayBlueShadow} 1px 1px;
+  ${styles.foreground(colors.foreground.meta, '1px')};
 `;
 
 export const PostFullTitle = styled.h1`
   margin: 0;
-  color: ${colors.balloonTitle};
-  text-shadow: ${colors.balloonTextShadow};
+  ${styles.foreground(colors.foreground.header, '2px')};
 
   background-size: cover;
   box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
   transition: all 0.5s ease;
 
-  ${styles.balloon};
+  ${styles.background(colors.background.ballon)};
+  ${styles.border(colors.border.balloon, 6)};
   position:relative;
   padding: 1rem 4rem;
 

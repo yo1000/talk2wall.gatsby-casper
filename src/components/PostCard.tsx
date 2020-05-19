@@ -22,7 +22,8 @@ const PostCardStyles = css`
   box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
   transition: all 0.5s ease;
 
-  ${styles.balloon}
+  ${styles.background(colors.background.ballon)};
+  ${styles.border(colors.border.balloon, 6)};
   position:relative;
   
   :hover {
@@ -58,10 +59,9 @@ const PostCardContentLink = css`
   flex-grow: 1;
   display: block;
   padding: 25px 25px 0;
-  color: ${colors.balloonTitle};
   
   h2 {
-    text-shadow: ${colors.balloonTitleShadow} 1px 1px;
+    ${styles.foreground(colors.foreground.header, '1px')};
   }
 
   :hover {
@@ -71,8 +71,7 @@ const PostCardContentLink = css`
 
 const PostCardTags = styled.span`
   margin-bottom: 4px;
-  color: ${colors.metaText};
-  text-shadow: ${colors.metaTextShadow} 1px 1px;
+  ${styles.foreground(colors.foreground.meta, '1px')};
 
   font-size: 1.2rem;
   line-height: 1.15em;
@@ -94,8 +93,7 @@ const PostCardTitle = styled.h2`
 `;
 
 const PostCardExcerpt = styled.section`
-  color: ${colors.balloonText};
-  text-shadow: ${colors.balloonTextShadow} 1px 1px;
+  ${styles.foreground(colors.foreground.standard, '1px')};
 `;
 
 const PostCardMeta = styled.footer`
@@ -201,8 +199,7 @@ const AuthorProfileImage = styled.img`
 const ReadingTime = styled.span`
   flex-shrink: 0;
   margin-left: 20px;
-  color: ${colors.metaText};
-  text-shadow: ${colors.metaTextShadow} 1px 1px;
+  ${styles.foreground(colors.foreground.meta, '1px')};
   font-size: 1.2rem;
   line-height: 33px;
   font-weight: 500;

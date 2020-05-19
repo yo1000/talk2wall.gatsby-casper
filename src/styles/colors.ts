@@ -11,45 +11,72 @@ export const colors = {
   pink: '#fa3a57',
   brown: '#a3821a',
 
-  ff8BallonBackgroundLeft: 'rgb(46, 46, 46)',
-  ff8BallonBackgroundRight: 'rgb(80, 80, 80)',
-  ff8BallonTranslucentBackgroundLeft: 'rgba(14, 14, 14, .25)',
-  ff8BallonTranslucentBackgroundRight: 'rgba(22, 22, 22, .25)',
+  /*
+  FF8 Colors
 
-  ff8BallonBorderOutLeft: 'rgb(97, 97, 97)',
-  ff8BallonBorderOutTop: 'rgb(97, 97, 97)',
-  ff8BallonBorderOutRight: 'rgb(36, 36, 36)',
-  ff8BallonBorderOutBottom: 'rgb(36, 36, 36)',
+  White     : #ededed / rbg(237, 237, 237)
+  (Shadow)  : #414131 / rbg( 65,  65,  49)
+  Gray      : rgb()
+  (Shadow)  : rbg()
+  Dark Blue : #9494a4 / rgb(148, 148, 164)
+  (Shadow)  : #313131 / rbg( 49,  49,  49)
+  Red       : #ff1818 / rgb(254,  24,  24)
+  (Shadow)  : #202020 / rbg( 32,  32,  32)
+  Yellow    : #dede08 / rgb(222, 222,   8)
+  (Shadow)  : #292929 / rgb( 41,  41,  41)
+  Green     : #00ff00 / rgb(  0, 255,   0)
+  (Shadow)  : #393931 / rbg( 57,  57,  49)
+  Blue      : #6ab4ee / rgb(106, 180, 238)
+  (Shadow)  : #292929 / rgb( 41,  41,  41)
 
-  ff8BallonBorderInLeft: 'rgb(93, 93, 93)',
-  ff8BallonBorderInTop: 'rgb(93, 93, 93)',
-  ff8BallonBorderInRight: 'rgb(63, 63, 63)',
-  ff8BallonBorderInBottom: 'rgb(63, 63, 63)',
+  Balloon Left  : #3c3c3c / rgb( 60,  60,  60)
+  Balloon Right : #616161 / rgb( 97,  97,  97)
 
-  ff8White: 'rgb(232, 232, 232)',
-  ff8WhiteShadow: 'rgb(50, 50, 37)',
-  ff8WhiteSub: 'rgba(232, 232, 232, .5)',
-  ff8WhiteSubShadow: 'rgba(50, 50, 37, .5)',
-  ff8Gray: 'rgb(109, 109, 109)',
-  ff8GrayShadow: 'rgb(22, 22, 22)',
-  ff8GrayBlue: 'rgb(129, 129, 147)',
-  ff8GrayBlueShadow: 'rgb(37, 37, 37)',
-  ff8Blue: 'rgb(89, 163, 234)',
-  ff8BlueShadow: 'rgb(31, 31, 31)',
-  ff8Red: 'rgb(252, 11, 21)',
-  ff8RedShadow: 'rgb(24, 24, 24)',
-  ff8Yellow: 'rgb(214, 218, 33)',
-  ff8YellowShadow: 'rgb(31, 31, 31)',
-  ff8Green: 'rgb(36, 255, 37)',
-  ff8GreenShadow: 'rgb(43, 43, 37)',
+  Balloon Border Left  : #747474 / rgb(116, 116, 116)
+  Balloon Border Right : #313131 / rgb( 49,  49,  49)
+  */
 
-  background: 'rgb(13, 21, 35)',
-  balloonTitle: 'rgb(232, 232, 232)',
-  balloonTitleShadow: 'rgb(50, 50, 37)',
-  balloonText: 'rgba(232, 232, 232, .5)',
-  balloonTextShadow: 'rgba(50, 50, 37, .5)',
-  metaText: 'rgb(129, 129, 147)',
-  metaTextShadow: 'rgb(22, 22, 22)',
+  border: {
+    balloon: {
+      left: '#747474',
+      top: '#747474',
+      right: '#313131',
+      bottom: '#313131',
+    },
+  },
 
+  background: {
+    standard: {
+      color: '#0d1523',
+    },
+    ballon: {
+      color: 'linear-gradient(to right, #3c3c3c, #616161)',
+    },
+    balloonGlassy: {
+      color: 'linear-gradient(to right, rgba(27, 27, 27, .5), rgba(51, 51, 51, .5))',
+    },
+  },
 
+  foreground: {
+    standard: {
+      color: 'rgba(237, 237, 237, .5)',
+      shadow: 'rgba( 65,  65,  49, .5)',
+    },
+    header: {
+      color: '#ededed',
+      shadow: '#414131',
+    },
+    link: {
+      color: '#6ab4ee',
+      shadow: '#292929',
+    },
+    code: {
+      color: '#dede08',
+      shadow: '#292929',
+    },
+    meta: {
+      color: '#9494a4',
+      shadow: '#313131',
+    },
+  },
 };
