@@ -27,6 +27,10 @@ export const PostFullContent = styled.section`
     font-size: 1.9rem;
   }
 
+  @media (max-width: 500px) {
+    padding-left: 1em;
+  }
+
   h1,
   h2,
   h3,
@@ -44,28 +48,50 @@ export const PostFullContent = styled.section`
     min-width: 100%;
   }
 
-  ul,
-  ol {
+  h2 {
+    padding-left: 4rem;
+
+    @media (max-width: 500px) {
+      padding-left: 3.5rem;
+    }
+
+    &:before {
+      display: inline-block;
+      position: absolute;
+      width: 2em;
+      word-break: break-word;
+      background: url(/img/icon-card.png) left 0 top 0 no-repeat;
+      background-size: 1em;
+      content: '';
+      height: 2em;
+      line-height: 0;
+      left: 7vw;
+
+      @media (max-width: 500px) {
+        left: 1.5rem;
+      }
+    }
+  }
+
+  ul {
     list-style: none;
-    padding-left: .45em;
-  }
+    padding-left: 1em;
 
-  li:before {
-    display: inline-block;
-    position: absolute;
-    width: 2em;
-    word-break: break-word;
-    background: url(/img/arrow.png) left 0 top .5625em no-repeat;
-    background-size: .33em;
-    content: '';
-    height: 1.6em;
-    line-height: 0;
-    left: 7vw;
-  }
-
-  @media (max-width: 500px) {
     li:before {
-      left: 1.5rem;
+      display: inline-block;
+      position: absolute;
+      width: 2em;
+      word-break: break-word;
+      background: url(/img/icon-arrow.png) left 1rem top .5625em no-repeat;
+      background-size: .33em;
+      content: '';
+      height: 1.6em;
+      line-height: 0;
+      left: 7vw;
+
+      @media (max-width: 500px) {
+        left: 1.5rem;
+      }
     }
   }
 
@@ -160,7 +186,7 @@ export const PostFullContent = styled.section`
   }
 
   code {
-    padding: 0 5px 2px;
+    padding: 0 2px;
     font-size: 0.8em;
     line-height: 1em;
     ${styles.foreground(colors.foreground.code, '1px')};
@@ -364,19 +390,17 @@ export const PostFullContent = styled.section`
     letter-spacing: 0.2px;
     text-align: left;
     text-transform: uppercase;
-    /* background-color: color(var(--whitegrey) l(+4%)); */
     background-color: ${lighten('0.04', colors.whitegrey)};
   }
 
   table th,
   table td {
     padding: 6px 12px;
-    /* border: color(var(--whitegrey) l(-1%) s(-5%)) 1px solid; */
     border: ${setSaturation('0.05', darken('0.01', colors.whitegrey))} 1px solid;
   }
 
   @media (max-width: 500px) {
-    padding: 0 1.5rem;
+    padding: 2rem 1.5rem 0;
     :before {
       display: none;
     }
