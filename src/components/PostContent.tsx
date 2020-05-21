@@ -9,7 +9,7 @@ import { styles } from '../styles/styles';
 export const PostFullContent = styled.section`
   position: relative;
   margin: 0 auto;
-  padding: 70px 100px 0;
+  padding: 5vw 7vw 0;
   min-height: 230px;
   font-size: 2rem;
   line-height: 1.6em;
@@ -23,9 +23,6 @@ export const PostFullContent = styled.section`
   ${styles.border(colors.border.balloon, 6)};
   position:relative;
   
-  @media (max-width: 1170px) {
-    padding: 5vw 7vw 0;
-  }
   @media (max-width: 800px) {
     font-size: 1.9rem;
   }
@@ -50,7 +47,7 @@ export const PostFullContent = styled.section`
   ul,
   ol {
     list-style: none;
-    padding-left: 1.5em;
+    padding-left: .45em;
   }
 
   li:before {
@@ -58,12 +55,18 @@ export const PostFullContent = styled.section`
     position: absolute;
     width: 2em;
     word-break: break-word;
-    background: url(/img/yubi.png) left 0 top .525em no-repeat;
-    background-size: 1.4em;
+    background: url(/img/arrow.png) left 0 top .5625em no-repeat;
+    background-size: .33em;
     content: '';
     height: 1.6em;
     line-height: 0;
-    left: 5em;
+    left: 7vw;
+  }
+
+  @media (max-width: 500px) {
+    li:before {
+      left: 1.5rem;
+    }
   }
 
   .post-content>p:first-child {
