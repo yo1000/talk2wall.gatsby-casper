@@ -16,8 +16,8 @@ export const colors = {
 
   White     : #ededed / rbg(237, 237, 237)
   (Shadow)  : #414131 / rbg( 65,  65,  49)
-  Gray      : rgb()
-  (Shadow)  : rbg()
+  Gray      : #525a52 / rgb( 82,  90, 82)
+  (Shadow)  : #a4a4a4 / rbg(164, 164, 164)
   Dark Blue : #9494a4 / rgb(148, 148, 164)
   (Shadow)  : #313131 / rbg( 49,  49,  49)
   Red       : #ff1818 / rgb(254,  24,  24)
