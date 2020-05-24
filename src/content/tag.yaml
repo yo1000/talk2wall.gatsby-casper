@@ -1,9 +1,9 @@
 - id: Tech
   description: ""
-  image: img/covers/tech.callum-shaw-555357-unsplash.jpg
+  image: img/covers/tech.png
 - id: Kotlin
   description: ""
-  image: img/covers/kotlin.benoit-gauzere-721743-unsplash.jpg
+  image: img/covers/kotlin.png
 - id: Spring
   description: ""
-  image: img/covers/spring.cheng-huang-1441775-unsplash.jpg
+  image: img/covers/spring.png
