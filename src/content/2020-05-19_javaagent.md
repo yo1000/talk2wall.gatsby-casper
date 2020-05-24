@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java agent をつくってみる
-image: img/covers/java.png
+image: img/covers/java.jpg
 author: yo1000
 date: 2020-05-19T00:00:00.000+09:00
 tags:

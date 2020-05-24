@@ -1,9 +1,9 @@
 - id: Tech
   description: ""
-  image: img/covers/tech.png
+  image: img/covers/tech.jpg
 - id: Kotlin
   description: ""
-  image: img/covers/kotlin.png
+  image: img/covers/kotlin.jpg
 - id: Spring
   description: ""
-  image: img/covers/spring.png
+  image: img/covers/spring.jpg

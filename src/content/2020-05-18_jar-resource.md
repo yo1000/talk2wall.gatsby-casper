@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Executable JAR のリソースを参照する
-image: img/covers/java.png
+image: img/covers/java.jpg
 author: yo1000
 date: 2020-05-18T00:00:00.000+09:00
 tags:
