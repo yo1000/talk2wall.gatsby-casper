@@ -8,10 +8,11 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "rimraf public",
-    "dev": "gatsby develop",
+    "develop": "gatsby develop",
+    "http": "http-server public",
     "lint": "eslint src/**/*.tsx src/**/*.ts",
     "lint:fix": "eslint --fix src/**/*.tsx src/**/*.ts",
-    "start": "npm run dev",
+    "start": "npm run develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -78,7 +79,8 @@
     "eslint-plugin-react": "7.13.0",
     "eslint-plugin-react-hooks": "1.6.0",
     "rimraf": "2.6.3",
-    "typescript": "3.5.2"
+    "typescript": "3.5.2",
+    "http-server": "^0.12.3"
   },
   "engines": {
     "node": ">=8.0.0"
